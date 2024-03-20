@@ -45,7 +45,7 @@ def add_member(name, tv_name, price, createdAt):
         "tv_name": tv_name,
         "price": price,
         "createdAt": createdAt_datetime,
-        "recurring": createdAt_datetime + timedelta(days=30.02)
+        "recurring": createdAt_datetime + timedelta(days=30)
     })
 
 def update_member_data(member_id, name, tv_name, price, createdAt, recurring):
