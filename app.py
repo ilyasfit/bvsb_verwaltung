@@ -10,9 +10,6 @@ from yaml.loader import SafeLoader
 with open('credentials.yaml') as file:
     config = yaml.load(file, Loader=yaml.SafeLoader)
 
-# Assuming your passwords in the YAML are plain text, hash them here
-hashed_passwords = stauth.Hasher([config['credentials']['usernames']['admin']['password']]).generate()
-
 # Authenticator initialisieren
 authenticator = stauth.Authenticate(
     config['credentials'],
